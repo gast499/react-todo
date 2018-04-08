@@ -7,5 +7,8 @@ module.exports = {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'client/dist')
 	},
-	context: __dirname
+	context: __dirname,
+	resolve: {
+		extensions: ['.js', '.jsx', '.json', '*']
+	}
 };
