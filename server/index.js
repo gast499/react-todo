@@ -11,3 +11,7 @@ app.use(function (err, req, res, next) {
   console.error(err.stack);
   res.status(err.status || 500).send(err.message || 'Internal server error.');
 });
+
+app.get('*', function (request, response) {
+  response.sendFile(path.resolve(__dirname, '..', 'client', 'index.html'))
+});
