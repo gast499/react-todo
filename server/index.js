@@ -15,3 +15,7 @@ app.use(function (err, req, res, next) {
 app.get('*', function (request, response) {
   response.sendFile(path.resolve(__dirname, '..', 'client', 'index.html'))
 });
+
+app.listen(process.env.PORT || 3000, function () {
+  console.log("Now Listening on Port 3000");
+});
